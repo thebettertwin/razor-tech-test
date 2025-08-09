@@ -23,4 +23,6 @@ Going to use tailwind for ease of use and speed
 Nice to have, use the posters to display the search results
 (and coming soon for ones without images)
 
-Getting duplicates in the api response
+Getting duplicates in the api response - if have time should look to address this
+
+Decision to use a search provider context - this allows me to persist the search state between navigation states - eg clicking into detail page and then going back to search results - still shows previous search results.

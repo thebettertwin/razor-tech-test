@@ -27,6 +27,8 @@
     "paths": {
       "@components": ["src/components"],
       "@components/*": ["src/components/*"],
+      "@context": ["src/context"],
+      "@context/*": ["src/context/*"],
       "@api": ["src/api"],
       "@api/*": ["src/api/*"],
       "@config": ["src/config"],

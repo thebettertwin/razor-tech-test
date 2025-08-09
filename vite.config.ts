@@ -12,6 +12,7 @@ export default defineConfig({
       "@config": path.resolve(__dirname, "src/config"),
       "@api": path.resolve(__dirname, "src/api"),
       "@helpers": path.resolve(__dirname, "src/helpers"),
+      "@context": path.resolve(__dirname, "src/context"),
     },
   },
 });
