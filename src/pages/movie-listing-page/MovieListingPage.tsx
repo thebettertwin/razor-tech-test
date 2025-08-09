@@ -1,12 +1,16 @@
 import { getMovieItem, type IMovieListing } from "@api/movie-item";
+import Rating from "@components/rating/rating";
 import { useSearchContext } from "@context/SearchContext";
 import { useQuery } from "@tanstack/react-query";
+import { useState } from "react";
 import { useParams } from "react-router-dom";
 
 function MovieListingPage() {
   const { id } = useParams(); // imdbID
   const context = useSearchContext();
   const cachedItem = context?.results.find((q) => q.data?.imdbID === id)?.data;
+
+  const [score, setScore] = useState(0);
 
   const { data, isLoading, isError } = useQuery<IMovieListing>({
     queryKey: ["movie", id],
@@ -41,7 +45,7 @@ function MovieListingPage() {
               <span>{movie.imdbRating}</span>
             </div>
             <div className="flex flex-col gap-1">
-              Your rating: <span>1/5</span>
+              Your rating: <Rating score={score} setScore={setScore} />
             </div>
           </div>
         </div>

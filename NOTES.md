@@ -26,3 +26,5 @@ Nice to have, use the posters to display the search results
 Getting duplicates in the api response - if have time should look to address this
 
 Decision to use a search provider context - this allows me to persist the search state between navigation states - eg clicking into detail page and then going back to search results - still shows previous search results.
+
+For now I am keeping components in a single directory. With a larger application in order to scale we would need to break down components atomically
