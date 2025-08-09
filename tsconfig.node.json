@@ -23,8 +23,14 @@
 
     "baseUrl": "./",
     "paths": {
+      "@components": ["src/components"],
+      "@components/*": ["src/components/*"],
       "@api": ["src/api"],
-      "@config": ["src/config"]
+      "@api/*": ["src/api/*"],
+      "@config": ["src/config"],
+      "@config/*": ["src/config/*"],
+      "@helpers": ["src/helpers"],
+      "@helpers/*": ["src/helpers/*"]
     }
   },
   "include": ["vite.config.ts"]
