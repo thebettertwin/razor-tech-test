@@ -16,14 +16,18 @@ function SearchForm() {
   };
 
   return (
-    <search>
-      <form onSubmit={handleSearch}>
-        <label htmlFor="movie">Find a Movie</label>
+    <search className="mb-10">
+      <form onSubmit={handleSearch} className="flex gap-4">
+        <label className="sr-only" htmlFor="movie">
+          Search for a movie
+        </label>
         <input
+          className="w-full px-4 py-2 rounded-sm border-1 dark:border-white/25 border-gray-800/25"
           type="search"
           id="movie"
           value={searchQuery || ""}
           onChange={handleSearchQueryChange}
+          placeholder="Search for a movie"
         />
         <button type="submit">Search</button>
       </form>

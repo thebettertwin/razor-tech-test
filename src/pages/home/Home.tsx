@@ -8,9 +8,8 @@ function Home() {
 
   return (
     <>
+      <h1 className="mb-8">Welcome to the totally not IMDB movie database</h1>
       <SearchForm />
-      <br />
-      <br />
       {isLoading ? (
         <p>Loading search results...</p>
       ) : (

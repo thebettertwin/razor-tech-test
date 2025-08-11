@@ -21,6 +21,7 @@ function Rating({
 
   const handleRatingClick = (rating: number) => {
     setScore(rating);
+    // would dispatch to server to save rating here
   };
 
   const handleKeyDown = (
@@ -52,7 +53,7 @@ function Rating({
             (hoverScore ?? score) >= rating
               ? "text-amber-300"
               : "text-gray-400",
-            "hover:text-amber-100 hover:cursor-pointer",
+            "hover:text-amber-200 hover:cursor-pointer",
             "transition-all duration-200 ease-in-out transform",
             hoverScore === rating ? "scale-125" : "scale-100",
             "focus:outline-none focus:ring-2 focus:ring-amber-300 rounded"

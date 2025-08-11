@@ -30,16 +30,20 @@ function MovieListingPage() {
 
   return (
     <div>
-      <div className="flex justify-between items-center mb-4">
+      <div className="flex flex-col sm:flex-row justify-between items-center mb-4">
         <h1 className="text-xl">{movie.Title}</h1>
         <p className="text-gray-500">
           {movie.Year} | {movie.Rated} | {movie.Runtime}
         </p>
       </div>
-      <div className="flex gap-8">
-        <div className="flex flex-col gap-4">
-          <img src={movie.Poster} alt={movie.Title} className="w-52 h-72" />
-          <div className="flex justify-between w-52">
+      <div className="flex flex-col sm:flex-row gap-8">
+        <div className="flex flex-col gap-4 justify-center">
+          <img
+            src={movie.Poster}
+            alt={movie.Title}
+            className="w-52 h-72 m-auto"
+          />
+          <div className="flex justify-between w-52 m-auto">
             <div className="flex flex-col gap-1">
               IMDb rating:
               <span>{movie.imdbRating}</span>
@@ -50,7 +54,7 @@ function MovieListingPage() {
           </div>
         </div>
         <div className="text-left">
-          <p className="text-white">{movie.Plot}</p>
+          <p className="dark:text-white text-gray-800">{movie.Plot}</p>
           <p className="text-gray-500">
             Directed by {movie.Director} | Starring {movie.Actors}
           </p>
