@@ -1,5 +1,5 @@
 import { getMovieItem, type IMovieListing } from "@api/movie-item";
-import Rating from "@components/rating/rating";
+import Rating from "@components/rating/Rating";
 import { useSearchContext } from "@context/SearchContext";
 import { useQuery } from "@tanstack/react-query";
 import { useState } from "react";
