@@ -24,14 +24,9 @@ export default function useSearch({
       return response.json() as Promise<ISearchResponse>;
     },
     initialPageParam: "1",
-    getNextPageParam: (lastPage, allPages) => {
-      // Replace this logic with your own pagination logic as needed
-      // For example, if lastPage has a property 'nextPage', return it:
-      // return lastPage.nextPage;
-      // Here, we just increment the page number as a string
+    getNextPageParam: (_, allPages) => {
+      // Future improvement to implement last page logic
       const nextPage = (allPages.length + 1).toString();
-      // Optionally, check if there are more pages
-      // return lastPage.hasMore ? nextPage : undefined;
       return nextPage;
     },
     enabled: !!searchQuery && enabled,
