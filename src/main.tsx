@@ -12,7 +12,9 @@ createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <QueryClientProvider client={queryClient}>
       <SearchProvider movieIds={[]}>
-        <BrowserRouter>
+        <BrowserRouter
+          basename={import.meta.env.DEV ? "/" : "/razor-tech-test"}
+        >
           <Routes>
             <Route Component={App} path="*" />
           </Routes>
