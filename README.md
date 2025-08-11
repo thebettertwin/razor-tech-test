@@ -16,7 +16,7 @@ Open [http://localhost:5173](http://localhost:5173) with your browser to see the
 
 ### Deployed build:
 The application is set to deploy a prod build with each push to main branch.
-This can be viewed [https://thebettertwin.github.io/razor-tech-test/]here
+This can be viewed https://thebettertwin.github.io/razor-tech-test/[here]
 
 
 ### Application supports system theme (controlled by your OS wide settings):
